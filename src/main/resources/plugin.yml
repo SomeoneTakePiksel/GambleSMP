@@ -1,9 +1,10 @@
 name: GambleSMP
 description: $description
 version: '${version}'
-
+website: "https://github.com/SomeoneTakePiksel"
 main: me.piksel.gambleSMP.GambleSMP
 api-version: '1.21.11'
-load: POSTWORLD
-
 authors: [ PikselWasTaken ]
+permissions:
+  gamblesmp.test:
+    default: op
