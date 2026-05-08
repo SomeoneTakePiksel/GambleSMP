@@ -1,7 +1,9 @@
 package me.piksel.gambleSMP.listeners;
 
+import me.piksel.gambleSMP.events.testEvent;
 import me.piksel.gambleSMP.guis.test;
 import org.bukkit.Material;
+import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -28,8 +30,18 @@ public class invListener implements Listener {
         // 1. Check if the inventory exists and has the correct title
         if (event.getView().getTitle().equals("GambleSMP")) {
             if (event.getInventory().getItem(13).getType() == Material.AIR ||event.getInventory().getItem(13).getType() == null){return;}
+            Player player = null;
+            HumanEntity clicked = event.getWhoClicked();
+
+            if (clicked instanceof Player){
+                player = (Player) event.getWhoClicked();
+            }
+
+
             if (!can(event)){
 
+                new testEvent().startEvent(player);
+                event.getInventory().close();
                 return;
             }
             // 2. Cancel the event to stop taking/placing items
