@@ -1,0 +1,9 @@
+name: GambleSMP
+description: $description
+version: '${version}'
+
+main: me.piksel.gambleSMP.GambleSMP
+api-version: '1.21.11'
+load: POSTWORLD
+
+authors: [ PikselWasTaken ]
