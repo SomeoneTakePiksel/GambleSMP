@@ -1,7 +1,7 @@
-package me.piksel.gambleSMP.listeners;
+package me.piksel.gambleSMP.listeners.test;
 
-import me.piksel.gambleSMP.events.testEvent;
-import me.piksel.gambleSMP.guis.test;
+import me.piksel.gambleSMP.events.test.testEvent;
+import me.piksel.gambleSMP.guis.test.test;
 import org.bukkit.Material;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
@@ -41,6 +41,7 @@ public class invListener implements Listener {
             if (!can(event)){
 
                 new testEvent().startEvent(player);
+                event.setCancelled(true);
                 event.getInventory().close();
                 return;
             }

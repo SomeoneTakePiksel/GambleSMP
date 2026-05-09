@@ -1,10 +1,7 @@
 package me.piksel.gambleSMP;
 
-import me.piksel.gambleSMP.command.testGamble;
-import me.piksel.gambleSMP.guis.test;
-import me.piksel.gambleSMP.listeners.invListener;
-import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
+import me.piksel.gambleSMP.command.test.testGamble;
+import me.piksel.gambleSMP.listeners.test.invListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class GambleSMP extends JavaPlugin {

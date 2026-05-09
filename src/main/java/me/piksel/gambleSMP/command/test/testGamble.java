@@ -1,13 +1,9 @@
-package me.piksel.gambleSMP.command;
+package me.piksel.gambleSMP.command.test;
 
 import io.papermc.paper.command.brigadier.BasicCommand;
 import io.papermc.paper.command.brigadier.CommandSourceStack;
-import me.piksel.gambleSMP.guis.test;
-import org.bukkit.Bukkit;
-import org.bukkit.Material;
+import me.piksel.gambleSMP.guis.test.test;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
 
 public class testGamble implements BasicCommand {
     @Override
