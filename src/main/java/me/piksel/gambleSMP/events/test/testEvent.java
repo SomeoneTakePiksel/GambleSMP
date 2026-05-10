@@ -41,7 +41,7 @@ public class testEvent {
             player.getWorld().spawnEntity(player.getLocation(), EntityType.WARDEN);
             return;
         } else if (value == 6) {
-            ItemStack d = new ItemStack(Material.DIAMOND, 64);
+            ItemStack d = new ItemStack(Material.DIRT, 64);
             for (int i = 0; i < 43;i++) {
 
                 player.getWorld().dropItem(player.getLocation(),d);

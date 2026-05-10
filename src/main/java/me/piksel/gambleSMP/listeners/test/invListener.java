@@ -3,6 +3,7 @@ package me.piksel.gambleSMP.listeners.test;
 import me.piksel.gambleSMP.events.test.testEvent;
 import me.piksel.gambleSMP.guis.test.test;
 import org.bukkit.Material;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -73,7 +74,7 @@ public class invListener implements Listener {
         if (!event.getAction().toString().contains("RIGHT_CLICK")) return;
         ItemStack item = event.getItem();
         Player player = event.getPlayer();
-        if (item.getType() != Material.EMERALD){return;}
+        if (item.getType() != Material.EMERALD && item.getEnchantmentLevel(Enchantment.UNBREAKING) >= 10){return;}
         item.setAmount(item.getAmount() - 1);
         new test().open(player);
     }
